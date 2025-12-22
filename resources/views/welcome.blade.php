@@ -14,7 +14,7 @@
 <body class="bg-white text-stone-900">
 
     <nav class="flex justify-between items-center px-10 py-6 border-b border-stone-100">
-        <h1 class="serif text-2xl font-bold tracking-tighter">THE BOUTIQUE</h1>
+        <h1 class="serif text-2xl font-bold tracking-tighter">KSM Enterprises</h1>
         <div class="space-x-8 text-sm uppercase tracking-widest font-medium">
             <a href="#" class="hover:text-stone-500">New Arrivals</a>
             <a href="#" class="hover:text-stone-500">Collection</a>
@@ -23,8 +23,8 @@
     </nav>
 
     <header class="py-16 text-center bg-stone-50">
-        <span class="uppercase tracking-[0.3em] text-xs text-stone-500 mb-4 block">Handpicked Elegance</span>
-        <h2 class="serif text-5xl md:text-7xl mb-6">The Winter Edit</h2>
+        <span class="uppercase tracking-[0.3em] text-xs text-stone-500 mb-4 block">Handpicked Metrials</span>
+        <h2 class="serif text-5xl md:text-7xl mb-6">KSM Garments and Fancy Store</h2>
         <p class="text-stone-500 max-w-md mx-auto leading-relaxed">Discover a curated selection of timeless pieces designed for the modern woman.</p>
     </header>
 
