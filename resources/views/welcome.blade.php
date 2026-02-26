@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' https: 'unsafe-inline'; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'">
     <title>Boutique Collection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,14 +31,14 @@
 
     <main class="container mx-auto px-6 py-16">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
-            
+
             @forelse($products as $product)
                 <div class="group cursor-pointer">
                     <div class="relative overflow-hidden aspect-[3/4] bg-stone-200">
-                        <img src="{{ asset('images/' . $product->image) }}" 
-                             alt="{{ $product->name }}" 
+                        <img src="{{ asset('images/' . $product->image) }}"
+                             alt="{{ $product->name }}"
                              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        
+
                         <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-white/80 backdrop-blur-sm">
                             <form action="/checkout/{{ $product->id }}" method="GET">
                                 <button class="w-full py-2 bg-stone-900 text-white text-xs uppercase tracking-widest">
