@@ -26,7 +26,7 @@ class ProductController extends Controller
     // Saves the new product the owner uploads
     public function store(Request $request)
     {
-        $imageName = time().'.'.$request->image->extension();  
+        $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path('images'), $imageName);
 
         Product::create([
@@ -47,12 +47,12 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        $product=Products::findOrFail($id);
+        $product=Product::findOrFail($id);
         if(file_exists(public_path('images/'.$product->image))){
             unlink(public_path('images/'.$product->image));
         }
         $product->delete();
-        return back()->with('seccess','Item removed from boutique.');
+        return back()->with('success','Item removed from boutique.');
     }
 
     // Saves the customer's checkout details
